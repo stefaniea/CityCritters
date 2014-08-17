@@ -2,14 +2,13 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Meet the  Pets!</title>
+    <title>Meet Our Pets!</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -20,9 +19,8 @@
     <!-- Fonts -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
-            <link rel="stylesheet" type="text/css" href="gridCSS/default.css" />
-        <link rel="stylesheet" type="text/css" href="gridCSS/component.css" />
-        <script src="gridJS/modernizr.custom.js"></script>
+    <link rel="stylesheet" type="text/css" href="gridCSS/component.css" />
+    <script src="gridJS/modernizr.custom.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,15 +29,18 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//assets.ziggeo.com/css/ziggeo-betajs-player.min.css" />
+    <script src="//assets.ziggeo.com/js/ziggeo-json2-betajs-player.min.js"></script>
+    <script>ZiggeoApi.token = "be6a9e4cb9bb3a186d8f73231816249a";</script>
 </head>
 
 <body>
 
     <div class="brand">City Critters</div>
-    <div class="address-bar">3481 Melrose Place | Beverly Hills, CA 90210 | 123.456.7890</div>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default" role="navigation">
+   <nav class="navbar navbar-default" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -58,11 +59,25 @@
                     <li>
                         <a href="index.html">Home</a>
                     </li>
-                    <li>
-                        <a href="about.html">About</a>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Adopt<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="adoptprocess.html">The Adoption Process</a></li>
+                            <li><a href="meetThePets.html">Meet Our Pets</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">How You Can Help<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Volunteer</a></li>
+                            <li><a href="#">Donate</a></li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="blog.html">Blog</a>
+                        <a href="#">Stumpy Fund</a>
+                    </li>
+                    <li>
+                        <a href="#">Resources</a>
                     </li>
                     <li>
                         <a href="contact.html">Contact</a>
@@ -73,6 +88,7 @@
         </div>
         <!-- /.container -->
     </nav>
+
 
     <div class="container">
 
@@ -88,8 +104,43 @@
 
            <!-- </div>-->
 
+        </div>
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>RECENT VIDEOS</strong> </br>
+                        <small>powered by <a href="http://ziggeo.com/">Ziggeo</a></small>
+                    </h2>
+                    <hr>
+                    <center>
+                        <ziggeo>
+                        </ziggeo>
+                        
+                        </br> 
+
+                        <ul id="og-grid1" class="og-grid">
+                            <li><ziggeo ziggeo-video="7a54d06e6bbd9e9502ef94735c7519b7 " 
+                                ziggeo-width="275"
+                                ziggeo-height="275">
+                        </ziggeo></li>
+                            <li><ziggeo ziggeo-video="8f04e1ec3fcbef8a28f81a0549359512" 
+                                ziggeo-width="275"
+                                ziggeo-height="275">
+                        </ziggeo></li>
+                        </ul>
+                        
+                        </br>
+
+                        
+                </center>
+                </div>
+            </div>
+        </div>
+
     </div>
-</div>
     <!-- /.container -->
 
     <footer>
@@ -103,8 +154,6 @@
     </footer>
 
     <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
