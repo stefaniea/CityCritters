@@ -179,7 +179,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; City Critters, Inc. 2014</p>
+                    <p>Copyright &copy; City Critters, Inc. POO 2014</p>
                 </div>
             </div>
         </div>
@@ -205,20 +205,40 @@
 </style>
     <!-- jQuery Version 1.11.0 -->
     <script src="js/jquery-1.11.0.js"></script>
-      <script src="jquery-ui.min.js"></script>
-    <script type="text/javascript"> 
-        $(document).on("ready", function(){
 
-/*$(function() {
-    $( "#dialog" ).dialog();
-  });*/
-$("#submit_button").click(function(){
-
-});
+    
+    <!-- jQuery Version 1.11.0 -->
+    <script src="jquery-ui.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.19/firebase.js"></script>
+    <script>
 
 $("#signup").click(function(){
     $("#dialog").dialog();
 });
+   
+
+$("#submit_button").click(function(){
+    $(".ui-dialog-titlebar-close").click();
+        //alert("hello?");
+        console.log("why");
+        var cellnum=$("#number").val();
+        var name = $("#name").val();
+        var msg="Hey, " + name + "! Thanks for subscribing to City Critter Updates! :) Powered by AT&T.";
+          var myFirebaseRef = new Firebase("https://popping-heat-8063.firebaseio.com/");
+
+            myFirebaseRef.push({
+              'name': name,
+              'number': cellnum,
+            });
+
+        $.get('https://datadipity.com/clickslide/girlswhocodesms.json?update&postparam[num]='+cellnum+'&postparam[message]='+msg+'&PHPSESSID=gae519f8k5humje0jqb195nob6')
+        .done(function(data){
+            //alert("success! You're now subscribed!");
+
+        });
+        });
+
+
     </script>
 
     <!-- Bootstrap Core JavaScript -->
@@ -228,7 +248,6 @@ $("#signup").click(function(){
         window.open('cci-adopt-foster-form.pdf');
     });
     </script>
-
 </body>
 
 </html>
