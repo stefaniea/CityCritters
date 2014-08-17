@@ -20,6 +20,8 @@
     <!-- Fonts -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+   <!-- <link rel="stylesheet" href="jquery-ui.theme.min.css">-->
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -150,11 +152,24 @@
                         <strong>SIGN UP FOR SMS TEXT ALERTS</strong>
                     </h2>
                     <hr>
-                    <p> Looking to adopt or foster? Want a easy, convenient way to see when new animals have been brought to our shelters? Sign up <a href="#">here</a> for SMS Text Alerts powered by AT&T that will deliver notifications straight to your cellphone!</p>
+                    <p> Looking to adopt or foster? Want a easy, convenient way to see when new animals have been brought to our shelters? Sign up <a id="signup"  style="cursor: pointer">here</a> for SMS Text Alerts powered by AT&T that will deliver notifications straight to your cellphone!</p>
                 </div>
             </div>
         </div>
 
+<div id="dialog" title="Sign Up For SMS Alerts">
+  <form>
+   <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Your Name">
+</div>
+<div class="form-group">
+    <label for="number">Phone Number</label>
+    <input type="text" class="form-control" id="number" placeholder="Your Cellphone Number">
+</div>
+<submit class="btn" id="submit_button">Submit!</submit>
+  </form>
+</div>
 
 
     </div>
@@ -169,20 +184,41 @@
             </div>
         </div>
     </footer>
+<style>
+#dialog {
+    display: none;
+    background-color: white;
+    padding: 30px;
+}
 
+#submit_button {
+    background-color: #999;
+}
+
+.ui-dialog-titlebar {
+    background-color: #999;
+    padding: 20px;
+}
+.ui-dialog-titlebar-close {
+    float: right;
+}
+</style>
     <!-- jQuery Version 1.11.0 -->
     <script src="js/jquery-1.11.0.js"></script>
+      <script src="jquery-ui.min.js"></script>
     <script type="text/javascript"> 
         $(document).on("ready", function(){
-            $.ajax({
-              type: "POST",
-              url: "/sendSMS",
-              data: { name: "John", location: "Boston" }
-            })
-              .done(function( msg ) {
-                debugger;
-            });
-        })
+
+/*$(function() {
+    $( "#dialog" ).dialog();
+  });*/
+$("#submit_button").click(function(){
+
+});
+
+$("#signup").click(function(){
+    $("#dialog").dialog();
+});
     </script>
 
     <!-- Bootstrap Core JavaScript -->
