@@ -181,6 +181,9 @@ footer p {
         table-layout: fixed;
         font-size: 1.1em;
     }
+    #ziggeo {
+        display: inline;
+    }
 }
 
 @media screen and (min-width:1200px) {
