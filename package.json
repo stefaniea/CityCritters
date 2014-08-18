@@ -1,6 +1,6 @@
 {
   "author": "potato",
-  "name": "web-api-code-example",
+  "name": "city-critters",
   "description": "poop",
   "version": "0.0.1",
   "main": "app.js",
@@ -9,6 +9,23 @@
     "express": "~4.0.0",
     "querystring": "~0.2.0",
     "request": "~2.34.0",
-    "connect" : "3.1.1"
-  }
+    "connect": "3.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stefaniea/CityCritters.git"
+  },
+  "keywords": [
+    "city",
+    "critters"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stefaniea/CityCritters/issues"
+  },
+  "homepage": "https://github.com/stefaniea/CityCritters"
 }
