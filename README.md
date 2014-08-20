@@ -13,7 +13,8 @@ Our team decided to redesign the City Critters website for several reasons -- th
 **Front-End**:
 
 Bootstrap, Jquery, Jquery UI
-Because we used Bootstrap, the website is response it.  Try it on your phone!
+Because we used Bootstrap, the website is responseive.  Try it on your phone!
+
 **APIs**:
 
 *Petfinder API*: on the adoption page - pulls cats from petfinder to directly show a particular shelter's animals
