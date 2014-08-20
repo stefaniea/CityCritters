@@ -12,8 +12,8 @@ Our team decided to redesign the City Critters website for several reasons -- th
 ####Technologies Used####
 **Front-End**:
 
-Bootstrap, Jquery, Jquery UI
-Because we used Bootstrap, the website is responseive.  Try it on your phone!
+-Bootstrap, Jquery, Jquery UI
+-Because we used Bootstrap, the website is responseive.  Try it on your phone!
 
 **APIs**:
 
